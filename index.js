@@ -1,7 +1,7 @@
 var util = require('util');
 var http = require('http');
 var Bot  = require('@kikinteractive/kik');
-
+var susi= require('./susi.js')
 // Configure the bot API endpoint, details for your bot
 var bot = new Bot({
     username: 'loklaksusi',
@@ -12,7 +12,9 @@ var bot = new Bot({
 bot.updateBotConfiguration();
 
 bot.onTextMessage((message) => {
-    message.reply(message.body);
+    susi.ask(message.body,function (answer) {
+      message.reply(answer)
+    })
 });
 
 // Set up your server and start listening

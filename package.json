@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start":"node index.js"
+    "start": "node index.js"
   },
   "keywords": [
     "susi",
@@ -14,6 +14,7 @@
   "author": "sch00lb0y",
   "license": "ISC",
   "dependencies": {
-    "@kikinteractive/kik": "^2.0.11"
+    "@kikinteractive/kik": "^2.0.11",
+    "request": "^2.75.0"
   }
 }
