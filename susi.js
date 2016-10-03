@@ -9,4 +9,4 @@ const askSusi=function (query,cb) {
   })
 }
 
-export.ask=askSusi
+exports.ask=askSusi
