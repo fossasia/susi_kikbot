@@ -6,7 +6,7 @@ var susi= require('./susi.js')
 var bot = new Bot({
     username: process.env.USER_NAME,
     apiKey: process.env.API_KEY,
-    baseUrl: process.env.HEROKU_URL
+    baseUrl: process.env.HEROKU_URL || 'https://loklaksusii.herokuapp.com'
 });
 
 bot.updateBotConfiguration();
