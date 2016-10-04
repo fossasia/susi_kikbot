@@ -1,4 +1,3 @@
-var util = require('util');
 var http = require('http');
 var Bot  = require('@kikinteractive/kik');
 var susi= require('./susi.js')
