@@ -5,14 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node index.js"
   },
-  "keywords": [
-    "susi",
-    "kik"
-  ],
-  "author": "sch00lb0y",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "@kikinteractive/kik": "^2.0.11",
     "request": "^2.75.0"

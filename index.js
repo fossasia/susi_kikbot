@@ -4,8 +4,8 @@ var susi= require('./susi.js')
 
 var bot = new Bot({
     username: 'loklaksusi',
-    apiKey: process.env.API_KEY,
-    baseUrl: process.env.HEROKU_URL || 'https://loklaksusii.herokuapp.com'
+    apiKey: (process.env.API_KEY),
+    baseUrl: (process.env.HEROKU_URL || 'https://loklaksusii.herokuapp.com')
 });
 
 bot.updateBotConfiguration();
@@ -17,5 +17,4 @@ bot.onTextMessage((message) => {
 });
 
 
-http.createServer(bot.incoming())
-    .listen(process.env.PORT||5000)
+http.createServer(bot.incoming()).listen(process.env.PORT||5000)
