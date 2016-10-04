@@ -4,7 +4,7 @@
   "description": "susi kik bot",
   "main": "index.js",
   "scripts": {
-    "test": "node tests/sample.js",
+    "test": "node tests/sample.js"
   },
   "license": "MIT",
   "dependencies": {
