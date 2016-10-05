@@ -11,7 +11,7 @@ This repository holds a Kik bot for [AskSusi](https://github.com/fossasia/susi_s
 
 ## Installation Info
 
-Please add installation info here.
+to setup the susi kik bot.check out the [installation guide](/installation/INSTALLATION.md) 
 
 ## Technology Stack
 
