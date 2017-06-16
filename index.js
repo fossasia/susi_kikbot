@@ -3,11 +3,15 @@ var Bot  = require('@kikinteractive/kik');
 var susi= require('./susi.js')
 
 var bot = new Bot({
-    username: 'loklaksusi',
-    apiKey: (process.env.API_KEY),
-    baseUrl: (process.env.HEROKU_URL || 'https://loklaksusii.herokuapp.com')
+    username: 'susi_bot',
+    apiKey: process.env.API_KEY,
+    baseUrl: process.env.HEROKU_URL
 });
 
+setInterval(function() {
+		http.get(process.env.HEROKU_URL);
+	}, 1200000);
+	
 bot.updateBotConfiguration();
 
 bot.onTextMessage((message) => {
