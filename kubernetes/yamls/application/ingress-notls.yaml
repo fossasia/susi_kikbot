@@ -1,0 +1,16 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: kik
+  namespace: kik
+  annotations:
+    kubernetes.io/ingress.class: "nginx"
+spec:
+  rules:
+  - host: susi-kik.tk
+    http:
+      paths:
+      - path: /
+        backend:
+          serviceName: kik
+          servicePort: 80

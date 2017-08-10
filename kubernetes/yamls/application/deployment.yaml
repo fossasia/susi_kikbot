@@ -1,0 +1,23 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: kik
+  namespace: kik
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: kik
+    spec:
+      containers:
+      - image: fossasia/susi_kikbot:latest-master
+        imagePullPolicy: Always
+        env:
+        - name: API_KEY
+          value: "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
+        - name: BASE_URL
+          value: "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
+        name: kik
+        ports:
+        - containerPort: 8080

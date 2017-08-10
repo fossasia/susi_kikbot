@@ -1,0 +1,21 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: kik
+  namespace: kik
+  annotations:
+    kubernetes.io/tls-acme: "true"
+    kubernetes.io/ingress.class: "nginx"
+spec:
+  tls:
+  - hosts:
+    - susi-kik.tk
+    secretName: kik-tls
+  rules:
+  - host: susi-kik.tk
+    http:
+      paths:
+      - path: /
+        backend:
+          serviceName: kik
+          servicePort: 80
