@@ -7,7 +7,7 @@ This repository holds a Kik bot for [AskSusi](https://github.com/fossasia/susi_s
 [![Code Climate](https://codeclimate.com/github/fossasia/susi_kikbot/badges/gpa.svg)](https://codeclimate.com/github/fossasia/susi_telegrambot)
 [![codecov](https://codecov.io/gh/fossasia/susi_kikbot/branch/development/graph/badge.svg)](https://codecov.io/gh/fossasia/susi_kikbot)
 
- ![susi kik](image/example.jpg "susi kik")
+ ![susi kik](./docs/images/example.jpg "susi kik")
 
 ## Installation Info
 
