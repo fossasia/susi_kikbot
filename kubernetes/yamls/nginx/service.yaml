@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: nginx2
+  namespace: nginx-ingress2
+spec:
+  type: LoadBalancer
+  loadBalancerIP: '35.202.243.68'
+  ports:
+  - port: 80
+    name: http
+  - port: 443
+    name: https
+  selector:
+    app: nginx2

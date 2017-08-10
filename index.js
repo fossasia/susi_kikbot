@@ -5,7 +5,7 @@ var susi= require('./susi.js')
 var bot = new Bot({
     username: 'susi_bot',
     apiKey: process.env.API_KEY,
-    baseUrl: process.env.HEROKU_URL
+    baseUrl: process.env.BASE_URL
 });
 
 setInterval(function() {
@@ -21,4 +21,4 @@ bot.onTextMessage((message) => {
 });
 
 
-http.createServer(bot.incoming()).listen(process.env.PORT||5000)
+http.createServer(bot.incoming()).listen(process.env.PORT || 8080)
