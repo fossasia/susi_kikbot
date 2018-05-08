@@ -1,6 +1,6 @@
 const request=require('request')
 const askSusi=function (query,cb) {
-  request('http://api.asksusi.com/susi/chat.json?q='+encodeURI(query), function (error, response, body) {
+  request('https://api.susi.ai/susi/chat.json?q='+encodeURI(query), function (error, response, body) {
     if (!error && response.statusCode == 200) {
       var data = JSON.parse(body);
 		message = '';
