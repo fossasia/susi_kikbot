@@ -1,6 +1,6 @@
 # Susi Kik Bot
 
-This repository holds a Kik bot for [AskSusi](https://github.com/fossasia/susi_server) made with Nodejs. [Kik](https://www.kik.com/) is a messenger services.
+This repository holds a Kik bot for [SUSI AI](https://github.com/fossasia/susi_server) made with Nodejs. [Kik](https://www.kik.com/) is a messenger services.
 
 [![Build Status](https://travis-ci.org/fossasia/susi_kikbot.svg?branch=master)](https://travis-ci.org/fossasia/susi_kikbot)
 [![CircleCI](https://img.shields.io/circleci/project/fossasia/susi_kikbot.svg?maxAge=2592000?style=flat-square)](https://circleci.com/gh/fossasia/susi_kikbot)
@@ -11,7 +11,7 @@ This repository holds a Kik bot for [AskSusi](https://github.com/fossasia/susi_s
 
 ## Installation Info
 
-to setup the susi kik bot.check out the [installation guide](/installation/INSTALLATION.md) 
+To setup the susi kik bot, check out the [installation guide](/docs/installation/INSTALLATION.md).
 
 ## Technology Stack
 
