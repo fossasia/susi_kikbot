@@ -1,9 +1,9 @@
 var http = require('http');
 var Bot  = require('@kikinteractive/kik');
-var susi= require('./susi.js')
+var susi= require('./susi.js');
 
 var bot = new Bot({
-    username: 'susi_bot',
+    username: process.env.KIK_BOT_USERNAME,
     apiKey: process.env.API_KEY,
     baseUrl: process.env.BASE_URL
 });
