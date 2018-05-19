@@ -1,8 +1,8 @@
 const request=require('request')
 const askSusi=function (query,cb) {
   request('https://api.susi.ai/susi/chat.json?q='+encodeURI(query), function (error, response, body) {
+    var data = JSON.parse(body);
     if (!error && response.statusCode == 200) {
-      var data = JSON.parse(body);
 		message = '';
 		if(data.answers[0].actions[1]){
 			if(data.answers[0].actions[1].type === 'rss'){
@@ -36,10 +36,10 @@ const askSusi=function (query,cb) {
 				message = data.answers[0].actions[0].expression;
 			}
 		} 
-      	cb(message); 
+      cb(message, data.answers[0].data[0].type); 
     }
     else {
-      cb('Oops, Looks like Susi is taking a break, She will be back soon')
+      cb('Oops, Looks like Susi is taking a break, She will be back soon', data.answers[0].data[0].type)
     }
   })
 }
