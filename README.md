@@ -24,4 +24,4 @@ For the start the default branch is master.
 
 ## License
 
-Please add license here.
+This project is licensed under the GNU LESSER GENERAL PUBLIC LICENSE, Version 2.1. Please find more info in our [License document](https://github.com/fossasia/susi_kikbot/blob/master/LICENSE)
