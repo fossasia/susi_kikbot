@@ -5,7 +5,7 @@ const askSusi=function (query,cb) {
     if (!error && response.statusCode == 200) {
 		message = '';
 		if(data.answers[0].actions[1]){
-			if(data.answers[0].actions[1].type === 'rss'){
+			if(data.answers[0].actions[1].type === 'rss') {
 				message += 'I found this on the web-:\n\n'
 				for(var i=0;i<(data.answers[0].metadata.count);i++){
 						message += ('Title : ');
@@ -14,10 +14,7 @@ const askSusi=function (query,cb) {
 						message += data.answers[0].data[i].link+', ';
 					message += '\n\n';
 				}
-			}
-		}
-		else{
-			if(data.answers[0].actions[0].type === 'table'){
+			} else if (data.answers[0].actions[0].type === "table") {
 				var colNames = data.answers[0].actions[0].columns;
 				if((data.answers[0].metadata.count)>20)
 					message += 'Due to message limit, only some results are shown-:\n\n';
@@ -31,15 +28,14 @@ const askSusi=function (query,cb) {
 					message += '\n\n';
 				}
 			}
-			else
-			{
-				message = data.answers[0].actions[0].expression;
-			}
+		}
+		else{
+			message = data.answers[0].actions[0].expression;
 		} 
       cb(message, data.answers[0].data[0].type); 
     }
     else {
-      cb('Oops, Looks like Susi is taking a break, She will be back soon', data.answers[0].data[0].type)
+      cb("Oops, Looks like Susi is taking a break, She will be back soon", "");
     }
   })
 }

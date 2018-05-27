@@ -9,7 +9,8 @@
   },
   "license": "MIT",
   "dependencies": {
-    "@kikinteractive/kik": "^2.0.11",
-    "request": "^2.75.0"
+    "@kikinteractive/kik": "^2.2.1",
+    "http": "0.0.0",
+    "request": "^2.87.0"
   }
 }
