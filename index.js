@@ -10,17 +10,17 @@ var bot = new Bot({
 });
 
 setInterval(function() {
-		http.get(process.env.HEROKU_URL);
-	}, 1200000);
-	
+        http.get(process.env.HEROKU_URL);
+    }, 1200000);
+
 bot.updateBotConfiguration();
 
 bot.onTextMessage((message) => {
-	var chatID = message.chatId;
-	var Username;
-	bot.getUserProfile(message.from).then((user) => {
-		Username = user.username;
-	});
+    var chatID = message.chatId;
+    var Username;
+    bot.getUserProfile(message.from).then((user) => {
+        Username = user.username;
+    });
 
 
     susi.ask(message.body,function (answer, type) {
@@ -49,5 +49,7 @@ bot.onTextMessage((message) => {
     })
 });
 
-
-http.createServer(bot.incoming()).listen(process.env.PORT || 8080)
+let port = process.env.PORT || 8080;
+let server = http
+    .createServer(bot.incoming())
+    .listen(port);
