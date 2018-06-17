@@ -22,7 +22,6 @@ bot.onTextMessage((message) => {
         Username = user.username;
     });
 
-
     susi.ask(message.body,function (answer, type) {
         if(type === "photo"){
             request.post({
@@ -39,6 +38,28 @@ bot.onTextMessage((message) => {
                         "to": Username,
                         "picUrl": answer
                     }
+                    ]
+                }
+            });
+        }
+        else if(type === 'gif') {
+            request.post({
+                url: "https://api.kik.com/v1/message",
+                auth: {
+                    user: process.env.KIK_BOT_USERNAME,
+                    pass: process.env.API_KEY
+                },
+                json: {
+                    "messages": [
+                        {
+                            "chatId": chatID,
+                            "type": "video",
+                            "to": Username,
+                            "videoUrl": answer,
+                            "muted": true,
+                            "autoplay": true,
+                            "attribution": "camera"
+                        }
                     ]
                 }
             });

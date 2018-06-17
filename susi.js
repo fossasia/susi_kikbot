@@ -30,7 +30,12 @@ const askSusi=function (query,cb) {
 			}
 		}
 		else{
-			message = data.answers[0].actions[0].expression;
+			if(data.answers[0].data[0].type === 'gif'){
+				message = data.answers[0].data[0].v1.original.mp4;
+			}
+			else{
+				message = data.answers[0].actions[0].expression;
+			}
 		} 
       cb(message, data.answers[0].data[0].type); 
     }
